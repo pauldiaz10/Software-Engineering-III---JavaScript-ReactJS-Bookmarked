@@ -1,0 +1,70 @@
+bookmarked/Bookmarked:
+  # Distelli Manifest example
+  # this example assumes the build and deploy servers are:
+  # Ubuntu 14.04 
+
+  PreRelease:
+    - echo "---Beginning PreRelease---"
+    - echo "--Installing build dependencies--"
+    - echo "-Updating apt-get-"
+    - sudo apt-get -y update
+    - echo "-Installing nodejs-"
+    - sudo apt-get -y install nodejs
+    - echo "-Installing npm-"
+    - sudo apt-get -y install npm
+    - echo "--Building--"
+    - npm install
+    - echo "--Testing--"
+    - npm test
+
+  PkgInclude:
+    - '*'
+
+  PkgExclude:
+    - node_modules/
+
+  PreInstall:
+    - echo "---Begining PreInstall---"
+    - echo "--Installing deploy dependencies--"
+    - echo "-Updating apt-get-"
+    - sudo apt-get -y update
+    - echo "-Installing nodejs-"
+    - sudo apt-get -y install nodejs
+    - echo "-Installing npm-"
+    - sudo apt-get -y install npm
+    - echo "-Installing bootstrap-"
+    - npm install bootstrap
+    - echo "-Installing firebase"
+    - npm install firebase
+    - echo "-Installing email-validator"
+    - npm install email-validator
+    - echo "-Installing react"
+    - npm install react
+    - echo "-Installing react dom"
+    - npm install react react-dom
+    - echo "-Installing react fa"
+    - npm install react react-fa
+    - echo "-Installing font-awesome"
+    - npm install font-awesome
+    - echo "-Installing gif player"
+    - npm i react-gif-player
+    - echo "-Installing react if comp"
+    - npm install react-if-comp
+    - echo "-Installing react router dom"
+    - npm i react-router-dom
+    - echo "-Installing react script"
+    - npm install react-scripts
+    - echo "-Installing react simple dropdown"
+    - npm install react-simple-dropdown
+    - echo "-Installing superagent"
+    - npm install superagent
+    
+  PostInstall:
+    - echo "Begin PostInstall"
+    - npm install
+
+  Env:
+    - PORT: 3000
+
+  Exec:
+    - /usr/bin/nodejs app.js

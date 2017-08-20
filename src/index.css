@@ -1,0 +1,825 @@
+/*navbar css*/
+.navbar-default {
+  background-color: #f9f9f9;
+  border-color: #da5656;
+  border-bottom-width: 10px;
+  font-size: 2em;
+}
+
+.navbar-fixed-top {
+    border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+}
+
+.dropdowncont {
+  padding-top: 20px;
+  padding-right: 5px;
+  position: absolute;
+  top:70px;
+  right:5px;
+  background-color: #f9f9f9;
+  width:140px;
+}
+
+.dropdowntext {
+  font-family: "Helvetica Neue", Helvetica, monospace;
+  font-size: 20px;
+  color: inherit;
+  text-decoration: inherit;
+  text-align: right;
+  width:140px;
+}
+
+.dropdowntext:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.home{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left:-100px;
+  top: -20px;
+  width: 1275px;
+  height: 800px;
+  background-image: url('https://static.pexels.com/photos/2773/city-skyline-skyscrapers-top.jpg');
+  background-size: 1275px 800px;
+  opacity: 0.7;
+}
+
+.homelog {
+  padding-top: 25px;
+  position:fixed;
+  top:100px;
+  left:35%;
+  height:380px;
+  width: 350px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.popupBackground {
+    background: rgba(0, 0, 0, .6);
+    color: rgba(0, 0, 0, .6);
+}
+
+.popupAdd {
+  margin-top: 55px;
+  padding-top: 25px;
+  position: fixed;
+  padding-left: 20px;
+  padding-right: 20px;
+  top: 100px;
+  left: 35%;
+  height: 550px;
+  width: 575px;
+  background: rgba(249, 249, 249, 1);
+  border: #da5650;
+  border-width: 3px;
+  border-style: groove;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 1;
+}
+
+.signupdiv {
+  margin-top:20px;
+}
+
+.logoIMG{
+  position:relative;
+  top:5px;
+  right: 50px;
+}
+
+/*bookmark css*/
+.gallery {
+  width: 300px;
+  height: 300px;
+  margin: 20px 20px 100px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  float: left;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.gallery:hover img{
+  opacity: 0.7;
+}
+
+.gallery-img {
+  display: block;
+  margin: auto;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 300px;
+  max-height: 250px;
+  z-index:-2px;
+}
+
+.gallery-vid {
+  display: block;
+  margin: auto;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  width: 90%;
+  height: 70%;
+  object-fit: contain;
+  max-width: 300px;
+  max-height: 250px;
+}
+
+.gallery-vid-you {
+  border: 0px;
+  margin-top: 120px;
+  padding-top:80px;
+  display: block;
+  margin: auto;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  width: 68%;
+  height: 94%;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gallery-caption {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 20px;
+  margin-top: 5px;
+  height: 40px;
+}
+
+.gallery-caption-title {
+
+  font-size: 13px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+   height: 40px;
+    z-index:0px;
+}
+
+.gallery-caption-title:hover {
+
+  color:blue;
+}
+
+.gallery-caption-userIcon {
+
+  position: relative;
+  border-radius: 50%;
+  height:40px;
+  width:40px;
+  margin-right:5px;
+  z-index:0px;
+}
+
+
+/* The Modal Pop-Up */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    max-height: 500px;
+    position:relative;
+}
+
+#modal-content-detail-top2 {
+
+    visibility: hidden;
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    left: 300px;
+    right: 0;
+
+
+}
+
+#modYou {
+    margin-top:-30px;
+}
+
+#modYou:hover ~ .modal-content-detail-bottom-vid {
+    visibility: visible;
+}
+
+.modal-content:hover ~ .modal-content-detail-bottom-vid{
+    visibility: visible;
+}
+
+
+#modImg:hover ~ #modal-content-detail-top {
+    visibility: visible;
+}
+
+#modImg:hover ~ .modal-content-detail-bottom {
+    visibility: visible;
+}
+
+#modImg {
+    top:100px;
+}
+
+.gif_player:hover ~ .modal-content-detail-bottom-vid {
+    visibility: visible;
+}
+
+.bookmark {
+    margin-top: 3px;
+    margin-left: 2px;
+    float: right;
+}
+
+.addCollectionIcon {
+    margin-top: 3px;
+    margin-left: 6px;
+    float: right;
+}
+
+.outOfLuke {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height:1000px;
+    background-color: #dfad3e;
+    top:250px;
+    
+}
+
+.outOfLuke p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bookedCount {
+    margin-right: 5px;
+    float: right;
+}
+
+
+.modal-content-detail-top {
+
+    visibility: hidden;
+    border-radius: 0;
+    background: #242424;
+    position: absolute;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    width: auto;
+    height: auto;
+    top:200px;
+    left:50px;
+    max-width: 900px;
+    max-height: 500px;
+}
+
+.modal-content-detail-bottom {
+
+    background: #292929;
+    visibility: hidden;
+    color: white;
+    border-radius: 4px;
+    opacity: .8;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    margin-top: 120px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    max-height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content-detail-bottom-vid {
+
+    background: #292929;
+    visibility: hidden;
+    color: white;
+    border-radius: 4px;
+    opacity: .9;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 900px;
+    max-height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal-content-detail-bottom p {
+    color: white;
+    font-weight: lighter;
+    font-size: 16px
+}
+
+#pmodImgTime {
+    margin-top: -10px;
+    float: right;
+    font-size:12px;
+}
+
+#pmodVidTime {
+    margin-top: -10px;
+    float: right;
+    font-size:12px;
+}
+
+
+.modal-content-collectionadd {
+    margin: auto;
+    margin-top: 0px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .modal-content-collectionadd h1 {
+    font-size: 20px;
+    color: #da5656;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+
+  .modal-content-collectionadd p {
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .modal-content-collectionadd button {
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 5px;
+  }
+
+  .collectionAddName{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    margin-right: 5px;
+    height:auto;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+#pmodGifTime {
+    margin-top: -10px;
+    float: right;
+    font-size:12px;
+}
+
+
+#pmodVidYouTime {
+    margin-top: -10px;
+    float: right;
+    font-size:12px;
+}
+
+.modal-content-user {
+
+    position:relative;
+    border-radius: 40px;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 110px;
+    right: 125px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+  background-color: #f9f9f9;
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*dropdown css*/
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown--active .dropdown__content {
+    display: block;
+}
+
+.user-control {
+    float: right;
+}
+
+.add-icon {
+  padding: 1px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top:500px;
+  right:-100px;
+}
+
+/*account css*/
+.account-icon {
+    position: relative;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    top:80px;
+    right:-50px;
+}
+
+
+.account-menu {
+    position: relative;
+    display: inline-block;
+
+}
+
+.account-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.account-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.account-content a:hover {background-color: #f1f1f1}
+
+.account-menu:hover .account-content {
+    display: block;
+}
+
+.account-menu:hover .account-icon {
+}
+
+
+
+/*gif css*/
+.gif-item {
+    box-shadow: 2px 2px 4px 0 #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0 0 1.5em;
+    padding: 1em;
+    width: 100%;
+}
+
+.gif-item img {
+    width: 100%;
+}
+
+.gif-list {
+    column-gap: 1.5em;
+    font-size: .85em;
+    margin: 6.5em 0;
+    padding: 0;
+}
+
+input {
+    border: 0px solid;
+    display: flex;
+    font-size: 22px;
+    height: 24px;
+    margin: 0 left;
+    text-align: left;
+    width: 94%;
+    box-sizing: border-box
+}
+
+
+
+input:focus {
+    outline:none !important;
+}
+
+.search {
+  background-color: #fff;
+    box-shadow: 2px 2px 4px 0 #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: .8em;
+    width: 60%;
+    height: 100%;
+}
+
+
+
+@media only screen and (min-width: 400px) {
+    .gif-list {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .gif-list {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .gif-list {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .gif-list {
+        -moz-column-count: 5;
+        -webkit-column-count: 5;
+        column-count: 5;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .app {
+        width: 1140px;
+    }
+}
+
+
+.searchIcon{
+    position:relative;
+    top:-28px;
+
+}
+
+.mom {
+    width: 100%; /* Try setting this to 400px or something */
+    display: table;
+    border: 1px solid #444444;
+}
+.child {
+    display: table-cell;
+}
+.childinner {
+    margin-left: 25px;
+    /* Decorative .. */
+    background-color: #cccccc;
+    min-height: 40px;
+}
+.child:first-child .childinner {
+    margin-left: 0;
+}
+
+/* User profile */
+.divStyleLeft {
+    float:left;
+    width:300px;
+    height:300px;
+    clear:both;
+}
+
+.divStyleRight {
+  position: relative;
+    float:right;
+    top:50px;
+    right:60px;
+    width:70%;
+    height:300px;
+}
+
+.userImageStyle {
+    object-fit: cover;
+    position: relative;
+    margin: 15px;
+    left: 50px;
+    top: 0px;
+    height:200px;
+    width:200px;
+    border-radius: 100px;
+
+}
+
+.userNameStyle {
+    position: relative;
+    top:-200px;
+    left: 300px;
+    display:block;
+    textAlign:center;
+    font-size: 20px;
+}
+
+.divBioStyle {
+    position: relative;
+    width:100%;
+    height:auto;
+    padding:20px;
+
+}
+
+.bioImageStyle {
+    position: absolute;
+    width:30%;
+    bottom: -50px;
+    right: 0;
+    padding: 5px;
+}
+
+.bioTextStyle {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-color: #da5656;
+  border-width: 4px;
+  border-style: solid;
+  padding:5px;
+}
+
+.collectionAddAwesome{
+  margin-top: 10px;
+  margin-right: 30px;
+}
+
+.collectionButtons{
+    float: left;
+    overflow-x: auto;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 60px;
+    white-space:nowrap;
+    width: 700px;
+}
+
+.addCollections {
+    float: left;
+    visibility: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 18px;
+    font-weight: bold;
+    height: 60px;
+    width: 100%;
+    overflow-x: auto;
+    white-space:nowrap;
+    padding: 10px 5px 5px 10px;
+}
+
+.collectionButtonsFeed{
+
+}
+
+.addCollections::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.collectionButtons::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+width: 50px;
+background-color: #df2a2a;
+border: 2px solid #e2b7b7;
+-webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:verticle {
+height: 50px;
+background-color: #df2a2a;
+border: 2px solid #e2b7b7;
+-webkit-border-radius: 6px;
+}
+
+.buttonSpec {
+  display: inline-block;
+  vertical-align:top;
+  width:auto;
+  margin-right:20px;
+  background:white;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  white-space:normal;
+
+}
+
+.collectionAdd{
+  float: right;
+  right:10px;
+}
+
+
+.feedStyle {
+    position: relative;
+    margin-top: 30px;
+}
+
+  .react-datalist {
+	margin-left: 10px;
+	border: 6px solid #da5656!important;
+	max-height: 300px!important;
+	overflow-x: hidden !important;
+	background-color: white;
+}
+
+.react-datalist .react-datalist-option {
+	display: block;
+	margin: 0 !important;
+	width: 100% !important;
+	padding: 1%!important;
+	cursor: pointer;
+	color: #da5656!important;
+}
+
+.react-datalist .react-datalist-option:hover {
+	background-color: #ed6161!important;
+  color: white!important;
+}
+
+.react-datalist .react-datalist-option.react-datalist-option-selected {
+  background-color: #ed6161!important;
+  color: white!important;
+}
